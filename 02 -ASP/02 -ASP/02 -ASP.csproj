@@ -135,15 +135,19 @@
     <Content Include="Views\Paciente\Gravar.cshtml" />
     <Content Include="Views\Usuario\Cadastro.cshtml" />
     <Content Include="Views\Usuario\Gravar.cshtml" />
+    <Content Include="Views\Carro\Carro.cshtml" />
+    <Content Include="Views\Carro\Cadastrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Carro.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

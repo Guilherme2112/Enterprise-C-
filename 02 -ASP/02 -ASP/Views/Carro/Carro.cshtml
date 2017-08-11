@@ -1,0 +1,32 @@
+﻿@model _02__ASP.Models.Carro
+@{
+    ViewBag.Title = "Carro";
+}
+
+<h2>Cadastrar Carro</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.Marca)
+        @Html.TextBoxFor(c => c.Marca)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Modelo)
+        @Html.TextBoxFor(c =>c.Modelo)
+    </div>
+        
+    <div class="form-group">
+        @Html.LabelFor(c=>c.Placa)
+        @Html.TextBoxFor(c=>c.Placa)
+    </div>
+    <div class="form-group">
+        @Html.EditorFor(c=> c.Ano)
+        @Html.EditorFor(c=>c.Ano)
+    </div>
+    <div class="form-group">
+        @Html.EditorFor(c=>c.Preco)
+        @Html.EditorFor(c=>c.Preco)
+    </div>
+}
