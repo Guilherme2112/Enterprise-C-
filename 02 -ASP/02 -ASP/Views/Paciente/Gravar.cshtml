@@ -1,0 +1,12 @@
+﻿@model _02__ASP.Models.Paciente
+
+@{
+    ViewBag.Title = "Gravar";
+
+}
+<h2>Gravar</h2>
+<div class="alert alert-success">@TempData["msg"]</div>
+<h3>Nome: @Model.nome</h3>
+<h3>Número do convenio: @Model.convenio</h3>
+<h3>Data de Nascimenteo: @Model.dtNasc</h3>
+<h3>Tipo Sanguíneo: @Model.tipo</h3>

@@ -1,0 +1,15 @@
+﻿@model _02__ASP.Models.Usuario
+@{
+    ViewBag.Title = "Gravar";
+}
+
+<div class="container">
+    <div class="alert alert-success">
+        @TempData["mensagem"]
+    </div>
+
+    <h2>Usuario mais recente: </h2>
+        <p>Nome: @Model.nome</p>
+        <p>Idade: @Model.idade anos.</p>
+        <p>E-Mail: @Model.email</p>
+</div>
