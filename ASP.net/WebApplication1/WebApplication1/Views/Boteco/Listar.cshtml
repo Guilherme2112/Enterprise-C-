@@ -1,0 +1,32 @@
+﻿@model List<WebApplication1.Models.Boteco>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Musica ao vivo</th>
+            <th>Data de inauguração</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var boteco in @Model)
+        {
+            <tr>
+                <td>@boteco.Nome</td>
+                <td>@boteco.Endereco</td>
+                <td>@if (@boteco.MusicaAoVivo)
+                {<p>Sim</p>}
+                else { <p>Não</p>}</td>
+                <td>@boteco.DataDeInauguracao.ToShortDateString()</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

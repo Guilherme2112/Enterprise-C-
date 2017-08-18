@@ -1,0 +1,12 @@
+﻿@model Cerveja.Models.Cerveja
+@{
+    ViewBag.Title = "Cadastrar Cerveja";
+}
+
+<h2>Cadastrar</h2>
+<h4>Preencha o Formulário</h4>
+@using (@Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Enviar" />
+}

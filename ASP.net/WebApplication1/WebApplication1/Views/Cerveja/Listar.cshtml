@@ -1,0 +1,33 @@
+﻿@model List<WebApplication1.Models.Cerva>
+@{
+    ViewBag.Title = "Listar Cervejas";
+}
+
+<h2>Listar Cervejas</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Preço</th>
+            <th>Sem Alcool?</th>
+            <th>Validade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cerva in @Model)
+        {
+            <tr>
+                <td>@cerva.Nome</td>
+                <td>@cerva.Marca</td>
+                <td>@cerva.Tipo</td>
+                <td>@cerva.Preco</td>
+                <td>@cerva.SemAlcool</td>
+                <td>@cerva.Validade.ToShortDateString()</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

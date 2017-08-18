@@ -1,0 +1,44 @@
+﻿@model WebApplication1.Models.Cerva
+@{
+    ViewBag.Title = "Cerveja";
+}
+
+<h2>Cadastro de Cerveja</h2>
+<h4>Preencha o Formulário</h4>
+
+@if(@TempData["mensagem"]!=null){ 
+<div class="alert alert-success">@TempData["mensagem"]</div>
+}
+@using (@Html.BeginForm())
+{
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.Nome)
+        @Html.TextBoxFor(c=>c.Nome,new { @class="form-control"})
+    </div>
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.Marca)
+        @Html.TextBoxFor(c => c.Marca, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.Tipo)
+        @Html.TextBoxFor(c => c.Tipo, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.Preco)
+        @Html.TextBoxFor(c => c.Preco, new { @class = "form-control" })
+    </div>
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.Validade)
+        @Html.EditorFor(c => c.Validade, new { @class = "form-control form-control.datepicker" })
+    </div>
+    <div class="form-group col-md-6">
+        @Html.LabelFor(c => c.SemAlcool)
+        @Html.CheckBoxFor(c => c.SemAlcool)
+    </div>
+    <div class="col-md-10">
+        <input type="submit" value="Cadastrar" class="btn btn-primary" />
+    </div>
+
+}
